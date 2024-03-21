@@ -1,11 +1,15 @@
-file_path = "/home/dione/Documenti/Università/Reply/main.py"
+file_path = "input/00-trailer.txt"
 
 with open(file_path, "r") as file:
     lines = file.readlines()
 
 # Extracting values from the first line
 values = lines[0].split()
-W = int(values[0])
+wtemp = ""
+for c in values[0]:
+    if c.isnumeric():
+        wtemp += c
+W = int(wtemp)
 H = int(values[1])
 GN = int(values[2])
 SM = int(values[3])
